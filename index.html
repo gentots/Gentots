@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEN TOTS - AI Plus Course | Digital Literacy & Technology Foundations</title>
+    <meta name="description" content="Comprehensive AI Plus Course for students. Learn IoT, AR/VR, AI/ML, Cybersecurity, and Digital Skills. Enroll now for ₹2000. Grades 5-12 welcome.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .logo-text h1 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1f2937;
+            margin: 0;
+        }
+        
+        .logo-text p {
+            font-size: 12px;
+            color: #6b7280;
+            margin: 0;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: #4b5563;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-menu a:hover {
+            color: #2563eb;
+        }
+        
+        .nav-cta {
+            background: linear-gradient(135deg, #2563eb, #8b5cf6);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #4b5563;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 50%, #faf5ff 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 20px 80px;
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .hero-logo {
+            width: 96px;
+            height: 96px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 36px;
+            margin: 0 auto 2rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 7rem);
+            font-weight: bold;
+            background: linear-gradient(135deg, #2563eb, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+        
+        .hero p {
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            color: #6b7280;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #2563eb, #8b5cf6);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        
+        .btn-secondary {
+            border: 2px solid #d1d5db;
+            color: #4b5563;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .btn-secondary:hover {
+            border-color: #2563eb;
+            color: #2563eb;
+        }
+        
+        .hero-features {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: #6b7280;
+        }
+        
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 5rem 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-header h2 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: bold;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        
+        .highlight {
+            background: linear-gradient(135deg, #2563eb, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .section-header p {
+            font-size: 1.25rem;
+            color: #6b7280;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Grid Layouts */
+        .grid {
+            display: grid;
+            gap: 2rem;
+        }
+        
+        .grid-2 {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+        
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        }
+        
+        /* Cards */
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        .card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .card-gradient {
+            background: linear-gradient(135deg, var(--from-color), var(--to-color));
+        }
+        
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--icon-from), var(--icon-to));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .card h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .card li {
+            padding: 0.25rem 0;
+            color: #4b5563;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .card li:before {
+            content: "•";
+            color: #10b981;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .card p {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+        
+        /* Specific Section Styles */
+        .about {
+            background: white;
+        }
+        
+        .benefits {
+            background: linear-gradient(135deg, #f9fafb, #eff6ff);
+        }
+        
+        .pricing {
+            background: white;
+        }
+        
+        .pricing-card {
+            max-width: 500px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #eff6ff, #faf5ff);
+            padding: 3rem;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            transform: scale(1.02);
+        }
+        
+        .price-badge {
+            background: linear-gradient(135deg, #2563eb, #8b5cf6);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .price {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        
+        .price-subtext {
+            color: #6b7280;
+            margin-bottom: 2rem;
+        }
+        
+        .price-features {
+            text-align: left;
+            margin: 2rem 0;
+        }
+        
+        .price-features li {
+            padding: 0.75rem 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #4b5563;
+        }
+        
+        .checkmark {
+            color: #10b981;
+            font-size: 20px;
+        }
+        
+        .testimonials {
+            background: linear-gradient(135deg, #f9fafb, #faf5ff);
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .stars {
+            color: #fbbf24;
+            margin-bottom: 1rem;
+            font-size: 18px;
+        }
+        
+        .testimonial-text {
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            color: #4b5563;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--avatar-from), var(--avatar-to));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .author-info h4 {
+            margin: 0;
+            font-size: 16px;
+            color: #1f2937;
+            font-weight: 600;
+        }
+        
+        .author-info p {
+            margin: 0;
+            font-size: 14px;
+            color: #6b7280;
+        }
+        
+        .contact {
+            background: white;
+        }
+        
+        .contact-item {
+            text-align: center;
+        }
+        
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--contact-from), var(--contact-to));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 30px;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .contact-item h3 {
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+            font-size: 1.25rem;
+        }
+        
+        .contact-item p {
+            color: #6b7280;
+        }
+        
+        .contact-cta {
+            text-align: center;
+            margin-top: 4rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1f2937;
+            color: white;
+            padding: 3rem 2rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .footer-logo-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .footer-text {
+            text-align: right;
+        }
+        
+        .footer-text p:first-child {
+            color: #9ca3af;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-text p:last-child {
+            color: #6b7280;
+            font-size: 14px;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .hero-buttons a {
+                text-align: center;
+            }
+            
+            .hero-features {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+            
+            .price {
+                font-size: 3rem;
+            }
+            
+            .footer-content {
+                text-align: center;
+            }
+            
+            .footer-text {
+                text-align: center;
+            }
+        }
+        
+        @media (min-width: 640px) {
+            .hero-buttons {
+                flex-direction: row;
+            }
+        }
+        
+        /* Utility Classes */
+        .hidden {
+            display: none;
+        }
+        
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <div class="logo-icon">GT</div>
+                <div class="logo-text">
+                    <h1>GEN TOTS</h1>
+                    <p>Digital Excellence</p>
+                </div>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <a href="https://rzp.io/rzp/piegz3h" class="nav-cta">Enroll Now</a>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-logo">GT</div>
+            <h1>AI PLUS COURSE</h1>
+            <p>Empowering the next generation with essential digital skills for a connected world</p>
+            
+            <div class="hero-buttons">
+                <a href="https://rzp.io/rzp/piegz3h" class="btn-primary">
+                    <span>Start Learning Today</span>
+                    <i class="fas fa-bolt"></i>
+                </a>
+                <a href="#about" class="btn-secondary">Learn More</a>
+            </div>
+            
+            <div class="hero-features">
+                <div class="hero-feature">
+                    <i class="fas fa-users" style="color: #2563eb;"></i>
+                    <span>Grades 5-12</span>
+                </div>
+                <div class="hero-feature">
+                    <i class="fas fa-clock" style="color: #8b5cf6;"></i>
+                    <span>Self-Paced</span>
+                </div>
+                <div class="hero-feature">
+                    <i class="fas fa-award" style="color: #10b981;"></i>
+                    <span>Certified</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About the <span class="highlight">AI Plus Course</span></h2>
+                <p>Comprehensive digital literacy and technology foundations course designed to prepare students for the digital age</p>
+            </div>
+            
+            <div class="grid grid-3">
+                <div class="card card-gradient" style="--from-color: #eff6ff; --to-color: #dbeafe;">
+                    <div class="card-icon" style="--icon-from: #2563eb; --icon-to: #1d4ed8;">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>IoT & Smart Technologies</h3>
+                    <ul>
+                        <li>Understand IoT ecosystem and applications</li>
+                        <li>Smart homes, farms, and cities</li>
+                        <li>Design IoT solutions for local problems</li>
+                        <li>Hands-on simulation projects</li>
+                    </ul>
+                </div>
+
+                <div class="card card-gradient" style="--from-color: #faf5ff; --to-color: #f3e8ff;">
+                    <div class="card-icon" style="--icon-from: #8b5cf6; --icon-to: #7c3aed;">
+                        <i class="fas fa-vr-cardboard"></i>
+                    </div>
+                    <h3>AR/VR Technologies</h3>
+                    <ul>
+                        <li>Explore Augmented & Virtual Reality</li>
+                        <li>Educational and professional applications</li>
+                        <li>Create basic AR/VR content</li>
+                        <li>Virtual field trips and simulations</li>
+                    </ul>
+                </div>
+
+                <div class="card card-gradient" style="--from-color: #ecfdf5; --to-color: #d1fae5;">
+                    <div class="card-icon" style="--icon-from: #10b981; --icon-to: #059669;">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Google Workspace Mastery</h3>
+                    <ul>
+                        <li>Master Docs, Sheets, Slides, Gmail</li>
+                        <li>Professional document creation</li>
+                        <li>Collaborative digital environments</li>
+                        <li>Cloud storage and data management</li>
+                    </ul>
+                </div>
+
+                <div class="card card-gradient" style="--from-color: #fff7ed; --to-color: #fed7aa;">
+                    <div class="card-icon" style="--icon-from: #f59e0b; --icon-to: #d97706;">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Visual Design & Creativity</h3>
+                    <ul>
+                        <li>Professional visual content creation</li>
+                        <li>Canva design fundamentals</li>
+                        <li>Digital art and media editing</li>
+                        <li>Portfolio development</li>
+                    </ul>
+                </div>
+
+                <div class="card card-gradient" style="--from-color: #fef2f2; --to-color: #fecaca;">
+                    <div class="card-icon" style="--icon-from: #ef4444; --icon-to: #dc2626;">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Cybersecurity & Ethics</h3>
+                    <ul>
+                        <li>Personal cybersecurity practices</li>
+                        <li>Recognize and respond to cyber threats</li>
+                        <li>Digital citizenship and ethics</li>
+                        <li>Safe online communication</li>
+                    </ul>
+                </div>
+
+                <div class="card card-gradient" style="--from-color: #f0f9ff; --to-color: #e0f2fe;">
+                    <div class="card-icon" style="--icon-from: #6366f1; --icon-to: #4f46e5;">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>AI & Future Technologies</h3>
+                    <ul>
+                        <li>AI/ML concepts for beginners</li>
+                        <li>Robotics and automation basics</li>
+                        <li>Emerging technology trends</li>
+                        <li>Innovation and problem-solving</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section benefits" id="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose <span class="highlight">AI Plus Course?</span></h2>
+                <p>Discover the key benefits that make our course stand out</p>
+            </div>
+            
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card-icon" style="--icon-from: #10b981; --icon-to: #059669;">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Future-Ready Skills</h3>
+                    <p>Prepare for careers in technology, digital marketing, and innovation with cutting-edge skills in AI, IoT, and emerging technologies.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="--icon-from: #2563eb; --icon-to: #1d4ed8;">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Hands-On Learning</h3>
+                    <p>Interactive projects, simulations, and real-world applications ensure you can immediately apply what you learn.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="--icon-from: #8b5cf6; --icon-to: #7c3aed;">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Local Relevance</h3>
+                    <p>Examples and case studies specifically tailored to Indian context and Telangana region for better understanding.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="--icon-from: #f59e0b; --icon-to: #d97706;">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Industry Certification</h3>
+                    <p>Earn a Digital Literacy Foundation Certificate recognized by industry professionals and educational institutions.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="--icon-from: #ef4444; --icon-to: #dc2626;">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Flexible Learning</h3>
+                    <p>Multiple course formats available including self-paced online, weekend workshops, and hybrid learning options.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="--icon-from: #6366f1; --icon-to: #4f46e5;">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Comprehensive Coverage</h3>
+                    <p>From basic digital literacy to advanced AI concepts, covering all essential skills for the digital age.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple <span class="highlight">Pricing</span></h2>
+                <p>Affordable education for everyone</p>
+            </div>
+            
+            <div class="pricing-card">
+                <div class="price-badge">Standard Package</div>
+                <div class="price">₹2,000</div>
+                <p class="price-subtext">Complete AI Plus Course with certification</p>
+                
+                <ul class="price-features">
+                    <li>
+                        <span class="checkmark"><i class="fas fa-check-circle"></i></span>
+                        <span>8 Comprehensive Modules</span>
+                    </li>
+                    <li>
+                        <span class="checkmark"><i class="fas fa-check-circle"></i></span>
+                        <span>Digital Literacy Certification</span>
+                    </li>
+                    <li>
+                        <span class="checkmark"><i class="fas fa-check-circle"></i></span>
+                        <span>Hands-on Projects & Assessments</span>
+                    </li>
+                    <li>
+                        <span class="checkmark"><i class="fas fa-check-circle"></i></span>
+                        <span>Course Materials Included</span>
+                    </li>
+                    <li>
+                        <span class="checkmark"><i class="fas fa-check-circle"></i></span>
+                        <span>Flexible Learning Formats</span>
+                    </li>
+                    <li>
+                        <span class="checkmark"><i class="fas fa-check-circle"></i></span>
+                        <span>Career Pathway Guidance</span>
+                    </li>
+                </ul>
+
+                <a href="https://rzp.io/rzp/piegz3h" class="btn-primary" style="width: 100%; justify-content: center;">
+                    Enroll Now - Pay ₹2,000
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our <span class="highlight">Students Say</span></h2>
+                <p>Real feedback from students who transformed their digital skills</p>
+            </div>
+            
+            <div class="grid grid-3">
+                <div class="testimonial-card card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The AI Plus Course completely changed my understanding of technology. The IoT and AR/VR modules were incredibly engaging and practical!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="--avatar-from: #3b82f6; --avatar-to: #8b5cf6;">A</div>
+                        <div class="author-info">
+                            <h4>Arjun Reddy</h4>
+                            <p>Grade 10 Student</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Amazing course structure! The cybersecurity module taught me how to stay safe online, and the Google Workspace skills are so useful for school projects."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="--avatar-from: #ec4899; --avatar-to: #dc2626;">P</div>
+                        <div class="author-info">
+                            <h4>Priya Sharma</h4>
+                            <p>Grade 8 Student</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Best investment for my future! The AI and robotics concepts are explained so clearly. Now I'm confident about pursuing a career in technology."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="--avatar-from: #10b981; --avatar-to: #0d9488;">R</div>
+                        <div class="author-info">
+                            <h4>Rohit Kumar</h4>
+                            <p>Grade 12 Student</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in <span class="highlight">Touch</span></h2>
+                <p>Ready to start your digital learning journey? Contact us today!</p>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="contact-item">
+                    <div class="contact-icon" style="--contact-from: #2563eb; --contact-to: #1d4ed8;">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>Gentots.com@gmail.com</p>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon" style="--contact-from: #10b981; --contact-to: #059669;">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>+91 8332865338</p>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon" style="--contact-from: #8b5cf6; --contact-to: #7c3aed;">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Visit Us</h3>
+                    <p>Near SVN School, Vishnupuri Colony<br>Kazipet - 506003</p>
+                </div>
+            </div>
+
+            <div class="contact-cta">
+                <a href="https://rzp.io/rzp/piegz3h" class="btn-primary">
+                    <span>Start Your Journey Today</span>
+                    <i class="fas fa-bolt"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="footer-logo-icon">GT</div>
+                <div class="logo-text">
+                    <h1>GEN TOTS</h1>
+                    <p>Digital Excellence</p>
+                </div>
+            </div>
+            <div class="footer-text">
+                <p>&copy; 2024 Gen Tots. All rights reserved.</p>
+                <p>"Empowering the next generation with essential digital skills for a connected world."</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards for animation
+        document.querySelectorAll('.card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.15)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+        });
+
+        // Mobile menu functionality (basic)
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileMenuBtn.addEventListener('click', function() {
+            navMenu.classList.toggle('hidden');
+        });
+
+        // Add stagger animation to cards
+        function addStaggerAnimation() {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+        }
+
+        // Initialize animations when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            addStaggerAnimation();
+            
+            // Add loading animation to hero
+            const hero = document.querySelector('.hero-content');
+            hero.style.animation = 'fadeInUp 0.8s ease-out';
+        });
+
+        // Add click tracking for enrollment buttons (optional)
+        document.querySelectorAll('a[href="https://rzp.io/rzp/piegz3h"]').forEach(button => {
+            button.addEventListener('click', function() {
+                console.log('Enrollment button clicked');
+                // You can add analytics tracking here
+            });
+        });
+
+        // Add hover effects for better interactivity
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
